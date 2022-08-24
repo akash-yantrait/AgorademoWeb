@@ -15,15 +15,9 @@
         }
     </style>
     <div id="root"></div>
-
-
-
 <script type="text/javascript">
 $( document ).ready(function() {
-
-
-
-    AgoraEduSDK.config({
+ AgoraEduSDK.config({
             appId: "{{$returnData['agora_app_identifier']}}",
         });
         AgoraEduSDK.launch(document.querySelector('#root'), {
@@ -43,13 +37,12 @@ $( document ).ready(function() {
         }).catch((e) => {
             console.error('fail to launch', e);
         });
-
-
-
 });
 
 var mainRoomId = "{{$returnData['roomUuid']}}";
 console.log('Room UID: '+mainRoomId);
+var ConsoleroomName ="{{$returnData['roomName']}}";
+console.log('Room Name: '+ConsoleroomName);
 </script>
 </body>
 </html>
